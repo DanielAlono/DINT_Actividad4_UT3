@@ -5,58 +5,68 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Actividad4_UT3"
         mc:Ignorable="d"
-        Title="MainWindow"
-        Height="450"
-        Width="800">
+        Title="Visor de imágenes"
+        Height="650"
+        Width="750">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize"
+                    Value="20" />
+            <Setter Property="FontWeight"
+                    Value="DemiBold" />
+            <Setter Property="Padding"
+                    Value="15" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Margin"
+                    Value="5" />
+            <Setter Property="Width"
+                    Value="100" />
+        </Style>
+        <Style TargetType="Image">
+            <Setter Property="Height"
+                    Value="200" />
+        </Style>
+    </Window.Resources>
     <DockPanel>
         <DockPanel DockPanel.Dock="Bottom"
-                   Background="LightBlue">
-            <TextBlock HorizontalAlignment="Left"
-                       Text="Nº de imágenes: 10" 
-                       FontSize="20"
-                       Padding="10"/>
-            <TextBlock HorizontalAlignment="Right"
-                       Text="Diseñado por Daniel Alonso" 
-                       FontSize="20"
-                       Padding="10"/>
+                   Background="LightBlue"
+                   Margin="10"
+                   LastChildFill="False">
+            <TextBlock DockPanel.Dock="Left"
+                       Text="Nº de imágenes: 10" />
+            <TextBlock DockPanel.Dock="Right"
+                       Text="Diseñado por Daniel Alonso" />
         </DockPanel>
-        <DockPanel DockPanel.Dock="Right" >
-            <DockPanel>
-                <Button DockPanel.Dock="Top"
-                        Margin="5">Añadir imagen</Button>
-                <Button DockPanel.Dock="Top"
-                        Margin="5">Eleminar imagen</Button>
-                <Button DockPanel.Dock="Top"
-                        Margin="5">Eliminar todas</Button>
-                <Button DockPanel.Dock="Bottom"
-                        Margin="5">Recortar</Button>
-                <Button DockPanel.Dock="Bottom"
-                        Margin="5">Rotar</Button>
-                <TextBlock DockPanel.Dock="Bottom" />
+        <Border DockPanel.Dock="Right"
+                Margin="10"
+                BorderThickness="2"
+                CornerRadius="3"
+                BorderBrush="Black">
+            <DockPanel Background="LightGreen">
+                <DockPanel LastChildFill="False">
+                    <Button DockPanel.Dock="Top">Añadir imagen</Button>
+                    <Button DockPanel.Dock="Top">Eleminar imagen</Button>
+                    <Button DockPanel.Dock="Top">Eliminar todas</Button>
+                    <Button DockPanel.Dock="Bottom">Recortar</Button>
+                    <Button DockPanel.Dock="Bottom">Rotar</Button>
+                </DockPanel>
             </DockPanel>
-        </DockPanel>
+        </Border>
         <DockPanel>
             <TextBlock DockPanel.Dock="Top"
                        Text="Visor de imágenes"
                        FontSize="40"
                        HorizontalAlignment="Center" />
-            <WrapPanel>
-                <Image Source="episodioIV.jpg"
-                       Height="200" />
-                <Image Source="episodioIV.jpg"
-                       Height="200" />
-                <Image Source="episodioIV.jpg"
-                       Height="200" />
-                <Image Source="episodioIV.jpg"
-                       Height="200" />
-                <Image Source="episodioIV.jpg"
-                       Height="200" />
-                <Image Source="episodioIV.jpg"
-                       Height="200" />
-                <Image Source="episodioIV.jpg"
-                       Height="200" />
-                <Image Source="episodioIV.jpg"
-                       Height="200" />
+            <WrapPanel HorizontalAlignment="Center">
+                <Image Source="episodioIV.jpg" />
+                <Image Source="episodioIV.jpg" />
+                <Image Source="episodioIV.jpg" />
+                <Image Source="episodioIV.jpg" />
+                <Image Source="episodioIV.jpg" />
+                <Image Source="episodioIV.jpg" />
+                <Image Source="episodioIV.jpg" />
+                <Image Source="episodioIV.jpg" />
             </WrapPanel>
         </DockPanel>
     </DockPanel>
